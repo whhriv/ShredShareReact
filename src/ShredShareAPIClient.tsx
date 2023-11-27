@@ -55,7 +55,7 @@ type RequestOptions = {
       return {
         ok: response.ok,
         status: response.status,
-        body: response.status !== 204 ? (await response.json()) : null,
+        body: response.status !== 204 ? (await response.json) : null,
       };
     }
   

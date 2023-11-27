@@ -31,14 +31,14 @@ export default function Register() {
     else {
       console.log('I am here in the await')
       const data = await api.post('/users', {
-        
+       
         username: usernameField.current.value,
         email: emailField.current.value,
         location: locationField.current.value,
         password: passwordField.current.value
       });
       if (!data.ok) {
-        setFormErrors(data.body.errors.json);
+        setFormErrors(data.body.errors.json());
         console.log('I am here SETFORMERRORS')
       }
       else {
