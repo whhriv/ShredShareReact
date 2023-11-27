@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import UserType from '../types/auth'
-import { login } from '../lib/apiWrapper'
+// import { login } from '../lib/apiWrapper'
 
 
 type LoginProps = {
@@ -37,20 +37,20 @@ export default function Login({ isLoggedIn, logUserIn}: LoginProps) {
     const handleFormSubmit = async (e: React.FormEvent): Promise<void> => {
         e.preventDefault()
         try {
-            // Using Axios for the login request
-            const response = await axios.get('https://cae-bookstore.herokuapp.com/login', {
-              headers: {
-                Authorization: `Basic ` + btoa(`${userFormData.email}:${userFormData.password}`),
-              },
-            });
+          //   // Using Axios for the login request
+          //   const response = await axios.get('https://cae-bookstore.herokuapp.com/login', {
+          //     headers: {
+          //       Authorization: `Basic ` + btoa(`${userFormData.email}:${userFormData.password}`),
+          //     },
+          //   });
       
-            console.log(JSON.stringify(response.data));
+          //   console.log(JSON.stringify(response.data));
       
-           localStorage.setItem('token',response.data?.token as string)
-            logUserIn(userFormData);
-            navigate('/AllQuestions');
-          } catch (error) {
-            console.error(error);
+          //  localStorage.setItem('token',response.data?.token as string)
+          //   logUserIn(userFormData);
+          //   navigate('/AllQuestions');
+          // } catch (error) {
+          //   console.error(error);
 
           }}
 

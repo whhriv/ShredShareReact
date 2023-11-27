@@ -6,13 +6,15 @@ import ExplorePage from './pages/ExplorePage';
 import LoginPage from './pages/LoginPage';
 import UserPage from './pages/UserPage';
 import Skis from './pages/skis'
-
-
+import Surf from './pages/surf'
+import Register from './pages/Register';
+import ApiProvider from './contexts/ApiProvider';
 
 export default function App() {
   return (
     <Container fluid className="App">
       <BrowserRouter>
+      <ApiProvider>
         <Navigation />
         <Routes>
           <Route path="/" element={<FeedPage />} />
@@ -20,8 +22,11 @@ export default function App() {
           <Route path="/user/:username" element={<UserPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/skis" element={<Skis />} />
+          <Route path="/surf" element={<Surf />} />
+          <Route path="/register" element={<Register />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
+        </ApiProvider>
       </BrowserRouter>
     </Container>
   );

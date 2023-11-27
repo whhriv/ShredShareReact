@@ -1,10 +1,14 @@
 import Container from 'react-bootstrap/Container';
 import Stack from 'react-bootstrap/Stack';
 import Sidebar from './SideBar';
+import { ReactNode } from 'react';
 
-type Props = {}
+type BodyProps = {
+    sidebar?: boolean;
+    children: ReactNode;
+}
 
-export default function Body({ sidebar, children }: Props) {
+export default function Body({ sidebar, children }: BodyProps) {
   return (
     <Container>
     <Stack direction="horizontal" className="Body">
