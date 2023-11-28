@@ -7,8 +7,8 @@ import Navbar from 'react-bootstrap/Navbar';
 
 export default function Navigation() {
   return (
-    <Navbar bg="light" sticky="top" className="Header">
-      <Container>
+    <Navbar bg="light" sticky="top" className="Header bg-info shadow-1-strong">
+      <Container className="bg-info shadow-1-strong">
         <Navbar.Brand>ShredShare</Navbar.Brand>
       </Container>
     </Navbar>

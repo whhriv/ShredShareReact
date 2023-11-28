@@ -45,7 +45,7 @@ export default function App() {
 
   
 return (
-    <Container fluid className="App">
+    <Container fluid className="App bg-info shadow-1-strong">
       <BrowserRouter>
       <ApiProvider>
         <Navigation />

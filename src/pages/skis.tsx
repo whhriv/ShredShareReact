@@ -1,9 +1,14 @@
 
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
 import  Card  from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 import { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Sidebar from '../components/SideBar';
 import Body from '../components/Body';
+import 'bootstrap/dist/css/bootstrap.min.css';  
 
 type SkiType = {
   id: number;
@@ -47,8 +52,35 @@ export default function Skis({}:SkiProps) {
     fetchData();
   }, []);
   return (
-    <>
     <Body sidebar>
+    <Container className='p-4'>
+    <Row md="4">
+      
+        {skis.map((ski) => (
+          <Col md="4" key={ski.id}>
+            <Card className="bg-transparent shadow-1-strong ">
+              <Card.Img variant="top" src={ski.image_url} />
+              <Card.Body>
+                <Card.Title>{ski.title}</Card.Title>
+                <Card.Text>{ski.description}</Card.Text>
+                <Card.Text>Make: {ski.make}</Card.Text>
+                <Card.Text>Model: {ski.model}</Card.Text>
+                <Card.Text>Length: {ski.length}</Card.Text>
+                <Card.Text>Bindings: {ski.binding}</Card.Text>
+                <Button variant="primary">Reserve!</Button>
+              </Card.Body>
+            </Card>
+          </Col>
+        )
+      )}
+    </Row>
+  </Container>
+  </Body>
+);
+};
+
+
+{/* <Body sidebar>
      {error ? (
         <div>Error: {error}</div>
       ) : (
@@ -67,7 +99,4 @@ export default function Skis({}:SkiProps) {
        ))}
        </div>
      )}
-     </Body>
-   </>
- );
-}
+     </Body> */}
