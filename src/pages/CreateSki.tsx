@@ -41,7 +41,7 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:5000/api/createskis');
+        const response = await fetch('http://127.0.0.1:5000/api/skis');
 
         if (response.ok) {
           const results = await response.json();
@@ -114,6 +114,10 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
 
                         <Form.Label htmlFor='binding'>binding</Form.Label>
                         <Form.Control value={skiFormData.binding} name='binding'  onChange={handleInputChange} />
+
+                        <Form.Label htmlFor='description'>description</Form.Label>
+                        <Form.Control value={skiFormData.description} name='description'  onChange={handleInputChange} />
+
 
                         <Button type='submit' variant='outline-success' className='w-100 mt-3'>Add Ski</Button>
                     </Form>

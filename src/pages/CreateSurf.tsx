@@ -41,7 +41,7 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:5000/api/skis');
+        const response = await fetch('http://127.0.0.1:5000/api/surf');
 
         if (response.ok) {
             console.log('response OK from fetch')
@@ -117,7 +117,7 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
                         <Form.Label htmlFor='description'>description</Form.Label>
                         <Form.Control value={surfFormData.description} name='description'  onChange={handleInputChange} />
 
-                        <Button type='submit' variant='outline-success' className='w-100 mt-3'>Add Ski</Button>
+                        <Button type='submit' variant='outline-success' className='w-100 mt-3'>Add Surfboard</Button>
                     </Form>
                 </Card.Body>
             </Card>
