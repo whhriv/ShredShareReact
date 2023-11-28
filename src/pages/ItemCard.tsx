@@ -42,4 +42,6 @@ export default function QuestionCard({ question }: Props) {
     <Card className='my-3'>
         <Card.Body>
              <Card.Title>{question.question} AUTHOR: {question.author}</Card.Title>
-             </Card.Body></Card>)}
+             </Card.Body></Card>
+        )
+    }

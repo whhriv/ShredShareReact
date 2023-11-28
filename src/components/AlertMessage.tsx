@@ -13,4 +13,4 @@ export default function AlertMessage({ message, category, flashMessage }: AlertM
 
     <Alert variant={category} dismissible onClose={() => flashMessage(null,null)}>{ message }</Alert>
 
-  )
+  )}

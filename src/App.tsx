@@ -1,4 +1,5 @@
 import Container from 'react-bootstrap/Container';
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import FeedPage from './pages/FeedPage';
@@ -9,18 +10,49 @@ import Skis from './pages/skis'
 import Surf from './pages/surf'
 import Register from './pages/Register';
 import ApiProvider from './contexts/ApiProvider';
+import AlertMessage from './components/AlertMessage'
+import CategoryType from './types/category';
+import UserType from './types/auth';
+
+
 
 export default function App() {
-  return (
+
+//   const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('token') ? true: false);
+//   const [loggedInUser, setLoggedInUser] = useState<Partial<UserType>|null>(null);
+//   const [message, setMessage] = useState<string|null>(null);
+//   const [category, setCategory] = useState<CategoryType|null>(null);
+
+//   const flashMessage = (newMessage:string|null, newCategory:CategoryType|null):void => {
+//     setMessage(newMessage);
+//     setCategory(newCategory);
+//   }
+ 
+//   const logUserIn = (user:Partial<UserType>): void => {
+//     setIsLoggedIn(true)
+//     setLoggedInUser(user)
+//     flashMessage(`${user.username} has been logged in`, 'success')
+// // }
+
+// const logUserOut = ():void => {
+//   setIsLoggedIn(false)
+//   setLoggedInUser(null)
+//   flashMessage('You have logged out', 'info')
+// }}
+
+
+  
+return (
     <Container fluid className="App">
       <BrowserRouter>
       <ApiProvider>
         <Navigation />
+       
         <Routes>
           <Route path="/" element={<FeedPage />} />
           <Route path="/explore" element={<ExplorePage />} />
           <Route path="/user/:username" element={<UserPage />} />
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/login" element={<LoginPage/>} />
           <Route path="/skis" element={<Skis />} />
           <Route path="/surf" element={<Surf />} />
           <Route path="/register" element={<Register />} />
@@ -31,6 +63,8 @@ export default function App() {
     </Container>
   );
 }
+
+
 
 // import Navigation from './components/Navigation'
 // import { useState } from 'react'

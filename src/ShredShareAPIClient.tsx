@@ -24,7 +24,7 @@ type RequestOptions = {
       this.base_url = 'http://127.0.0.1:5000/api';
     }
   
-    private async request<T>(options: RequestOptions): Promise<T> {
+    private async request<T>(options: RequestOptions<url>): Promise<T> {
       let query = new URLSearchParams(options.query || {}).toString();
       if (query !== '') {
         query = '?' + query;

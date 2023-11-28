@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "src/pages/Register.tsx", "src/components/.AlertMessage.tsx", "src/components/.Login.tsx"],
+  "include": ["src", "src/pages/Register.tsx", "src/components/AlertMessage.tsx", "src/components/.Login.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
