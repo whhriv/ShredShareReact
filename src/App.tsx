@@ -13,6 +13,8 @@ import ApiProvider from './contexts/ApiProvider';
 import AlertMessage from './components/AlertMessage'
 import CategoryType from './types/category';
 import UserType from './types/auth';
+import CreateSki from './pages/CreateSki';
+import CreateSurf from './pages/CreateSurf';
 
 
 
@@ -54,7 +56,9 @@ return (
           <Route path="/user/:username" element={<UserPage />} />
           <Route path="/login" element={<LoginPage/>} />
           <Route path="/skis" element={<Skis />} />
+          <Route path="/createski" element={<CreateSki />} />
           <Route path="/surf" element={<Surf />} />
+          <Route path="/createsurf" element={<CreateSurf />} />
           <Route path="/register" element={<Register />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>

@@ -52,15 +52,15 @@ export default function Surf({}:SurfProps) {
         <div>Error: {error}</div>
       ) : (
       <div>
-        {surf && surf.map((sarf) => (
-          <Card  key={sarf.id}>
+        {surf && surf.map((surf) => (
+          <Card  key={surf.id}>
             <Card.Body>
-            <Card.Title>{sarf.title}</Card.Title>
-                <Card.Text>{sarf.description}</Card.Text>
-                <Card.Text>Make: {sarf.make}</Card.Text>
-                <Card.Text>Model: {sarf.model}</Card.Text>
-                <Card.Text>Length: {sarf.length}</Card.Text>
-                <Card.Text>userID {sarf.userId}</Card.Text>
+            <Card.Title>{surf.title}</Card.Title>
+                <Card.Text>{surf.description}</Card.Text>
+                <Card.Text>Make: {surf.make}</Card.Text>
+                <Card.Text>Model: {surf.model}</Card.Text>
+                <Card.Text>Length: {surf.length}</Card.Text>
+                <Card.Text>userID {surf.userId}</Card.Text>
             </Card.Body>
           </Card>
        ))}

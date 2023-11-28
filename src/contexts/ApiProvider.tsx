@@ -14,6 +14,6 @@ export default function ApiProvider({ children }) {
   );
 }
 
-export function useApi() {
+export  function useApi() {
   return useContext(ApiContext);
 }

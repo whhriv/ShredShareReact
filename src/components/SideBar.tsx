@@ -12,7 +12,13 @@ export default function Sidebar() {
         <Nav.Link as={NavLink} to="/skis">Skis</Nav.Link>
       </Nav.Item>
       <Nav.Item>
+        <Nav.Link as={NavLink} to="/createski">Add Ski</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
         <Nav.Link as={NavLink} to="/surf">Surf</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link as={NavLink} to="/createsurf">Add Surfboard</Nav.Link>
       </Nav.Item>
       <Nav.Item>
         <Nav.Link as={NavLink} to="/explore">Explore</Nav.Link>

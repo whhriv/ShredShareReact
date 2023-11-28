@@ -123,7 +123,7 @@ export default function Register() {
     }
     else {
       console.log('I am here in the await')
-      const data = await api.post('/users', {
+      const data = await api.post('/register', {
        
         username: usernameField.current!.value,
         email: emailField.current!.value,
