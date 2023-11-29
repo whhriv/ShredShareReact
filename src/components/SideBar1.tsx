@@ -6,8 +6,12 @@ import {
   CDBSidebarHeader,
   CDBSidebarMenu,
   CDBSidebarMenuItem,
+  
 } from 'cdbreact';
 import { NavLink } from 'react-router-dom';
+import CDBIcons from 'react-bootstrap-icons'
+
+
 // import Navbar from 'cdbreact/dist/components/Navbar';
 // import Nav from 'react-bootstrap/Nav'
 const Sidebar = () => {
@@ -26,25 +30,25 @@ const Sidebar = () => {
               <CDBSidebarMenuItem icon="columns">Dashboard</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/skis" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="table">Skis</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="skiing">Skis</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/createski" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="table">Add Ski</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="skiing">Add Ski</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/surf" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="user">Surfboards</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="snowboarding">Surfboards</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/createsurf" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="chart-line">Add Surfboard</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="cart-plus">Add Surfboard</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/explore" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="table">Explore</CDBSidebarMenuItem>
             </NavLink>            
             <NavLink exact to="/login" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="table">Login</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="user">Login</CDBSidebarMenuItem>
             </NavLink>            
             <NavLink exact to="/register" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="table">Register</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="hamsa">Register</CDBSidebarMenuItem>
             </NavLink>
 
             <NavLink exact to="/hero404" target="_blank" activeClassName="activeClicked">

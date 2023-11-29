@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Sidebar from '../components/SideBar1';
 import Body from '../components/Body';
-
+import Container from 'react-bootstrap/Container';
 type SurfType = {
   id: number;
   title: string;
@@ -52,8 +52,10 @@ export default function Surf({}:SurfProps) {
         <div>Error: {error}</div>
       ) : (
       <div>
+        
         {surf && surf.map((surf) => (
-          <Card  key={surf.id}>
+          <Container>
+          <Card className="bg-transparent shadow-1-strong ms-3" key={surf.id}>
             <Card.Body>
             <Card.Title>{surf.title}</Card.Title>
                 <Card.Text>{surf.description}</Card.Text>
@@ -63,6 +65,7 @@ export default function Surf({}:SurfProps) {
                 <Card.Text>userID {surf.userId}</Card.Text>
             </Card.Body>
           </Card>
+          </Container>
        ))}
        </div>
      )}

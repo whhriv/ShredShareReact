@@ -58,7 +58,7 @@ export default function Skis({}:SkiProps) {
       
         {skis.map((ski) => (
           <Col md="4" key={ski.id}>
-            <Card className="bg-transparent shadow-1-strong ">
+            <Card className="bg-transparent shadow-1-strong m-4">
               <Card.Img variant="top" src={ski.image_url} />
               <Card.Body>
                 <Card.Title>{ski.title}</Card.Title>

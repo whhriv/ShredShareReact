@@ -7,6 +7,8 @@ import UserType from '../types/auth';
 import ImageUpload from '../components/ImageUpload';
 import Container from 'react-bootstrap/Container';
 
+
+
 type SkiType = {
   id: number;
   title: string;
@@ -65,10 +67,12 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
   const createSki = async () => {
 
     try {
+      // const token = 
       const response = await fetch('http://127.0.0.1:5000/api/createskis', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
         },
         body: JSON.stringify({
           title: skiFormData.title,
