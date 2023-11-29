@@ -45,7 +45,7 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:5000/api/skis');
+        const response = await ('http://127.0.0.1:5000/api/skis');
 
         if (response.ok) {
           const results = await response.json();

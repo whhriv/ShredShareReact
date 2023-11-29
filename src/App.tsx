@@ -16,6 +16,7 @@ import CategoryType from './types/category';
 import UserType from './types/auth';
 import CreateSki from './pages/CreateSki';
 import CreateSurf from './pages/CreateSurf';
+import Login from './components/Login'
 
 
 
@@ -56,6 +57,7 @@ return (
           <Route path="/explore" element={<ExplorePage />} />
           <Route path="/user/:username" element={<UserPage />} />
           <Route path="/login" element={<LoginPage/>} />
+          <Route path="/loginextra" element={<Login/>} />
           <Route path="/skis" element={<Skis />} />
           <Route path="/createski" element={<CreateSki />} />
           <Route path="/surf" element={<Surf />} />

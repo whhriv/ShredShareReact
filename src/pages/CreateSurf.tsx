@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Body from '../components/Body';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import UserType from '../types/auth';
+// import UserType from '../types/auth';
 import ImageUpload from '../components/ImageUpload';
 import Container from 'react-bootstrap/Container';
 
@@ -14,7 +14,6 @@ type SurfType = {
   make: string;
   model: string;
   length: string;
-  binding: string;
   dateCreated: string;
   userId: number;
 };
@@ -32,7 +31,7 @@ const CreateSurf: React.FC<SurfProps> = () => {
         make: '',
         model: '',
         length: '',
-        binding: '',
+        
     }
 )
 

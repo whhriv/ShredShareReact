@@ -43,48 +43,7 @@ export default function LoginPage() {
 
         console.log('Sending request with username:', username, 'and password:', password);
 
-
-  //       const loginResponse = await fetch('http://127.0.0.1:5000/api/login', {
-  //         method: 'POST',
-  //         headers: {
-  //           'Content-Type': 'application/json',
-  //         },
-  //         body: JSON.stringify({ username, password }),
-  //       });
-
-  //       if (!loginResponse.ok) {
-  //         const responseBodyText = await loginResponse.text();
-  //         console.error('Login failed:', responseBodyText);
-  //         alert('Login failed - check credentials');
-  //         return;
-  //       }
-
-  //       // Assuming your server responds with a JSON object containing a token
-  //       const loginResponseBody = await loginResponse.json();
-  //       const token = loginResponseBody.token;
-
-  //       // If login is successful, make a GET request to get the token
-  //       const tokenResponse = await fetch('http://127.0.0.1:5000/api/token', {
-  //         method: 'GET',
-  //         headers: {
-  //           'Authorization': `Bearer ${token}`, // Use the token obtained from the login response
-  //         },
-  //       });
-
-  //       if (tokenResponse.ok) {
-  //         const tokenResponseBody = await tokenResponse.json();
-  //         console.log('Token:', tokenResponseBody.token);
-  //         // Handle the obtained token as needed
-  //       } else {
-  //         const tokenResponseBodyText = await tokenResponse.text();
-  //         console.error('Failed to get token:', tokenResponseBodyText);
-  //       }
-  //     } catch (error) {
-  //       console.error('Error during login:', error);
-  //     }
-  //   }
-  // };
-
+    
         const response = await fetch('http://127.0.0.1:5000/api/login', {
           method: 'POST', //GET request for token with username/password
           headers: {
@@ -137,3 +96,43 @@ export default function LoginPage() {
 
 
 
+// const loginResponse = await fetch('http://127.0.0.1:5000/api/login', {
+  //         method: 'POST',
+  //         headers: {
+  //           'Content-Type': 'application/json',
+  //         },
+  //         body: JSON.stringify({ username, password }),
+  //       });
+
+  //       if (!loginResponse.ok) {
+  //         const responseBodyText = await loginResponse.text();
+  //         console.error('Login failed:', responseBodyText);
+  //         alert('Login failed - check credentials');
+  //         return;
+  //       }
+
+  //       // Assuming your server responds with a JSON object containing a token
+  //       const loginResponseBody = await loginResponse.json();
+  //       const token = loginResponseBody.token;
+
+  //       // If login is successful, make a GET request to get the token
+  //       const tokenResponse = await fetch('http://127.0.0.1:5000/api/token', {
+  //         method: 'GET',
+  //         headers: {
+  //           'Authorization': `Bearer ${token}`, // Use the token obtained from the login response
+  //         },
+  //       });
+
+  //       if (tokenResponse.ok) {
+  //         const tokenResponseBody = await tokenResponse.json();
+  //         console.log('Token:', tokenResponseBody.token);
+  //         // Handle the obtained token as needed
+  //       } else {
+  //         const tokenResponseBodyText = await tokenResponse.text();
+  //         console.error('Failed to get token:', tokenResponseBodyText);
+  //       }
+  //     } catch (error) {
+  //       console.error('Error during login:', error);
+  //     }
+  //   }
+  // };
