@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
 import { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
-import Sidebar from '../components/SideBar';
+import Sidebar from '../components/SideBar1';
 import Body from '../components/Body';
 import 'bootstrap/dist/css/bootstrap.min.css';  
 
@@ -53,7 +53,7 @@ export default function Skis({}:SkiProps) {
   }, []);
   return (
     <Body sidebar>
-    <Container className='p-4'>
+    
     <Row md="4">
       
         {skis.map((ski) => (
@@ -74,7 +74,7 @@ export default function Skis({}:SkiProps) {
         )
       )}
     </Row>
-  </Container>
+  
   </Body>
 );
 };

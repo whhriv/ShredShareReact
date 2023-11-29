@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navigation from './components/Navigation';
+import Sidebar from './components/SideBar1';
 import FeedPage from './pages/FeedPage';
 import ExplorePage from './pages/ExplorePage';
 import LoginPage from './pages/LoginPage';
@@ -45,10 +46,10 @@ export default function App() {
 
   
 return (
-    <Container fluid className="App bg-info shadow-1-strong">
+  
+   <Container fluid className="App bg-info shadow-1-strong">
       <BrowserRouter>
       <ApiProvider>
-        <Navigation />
        
         <Routes>
           <Route path="/" element={<FeedPage />} />

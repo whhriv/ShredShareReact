@@ -4,6 +4,8 @@ import Body from '../components/Body';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import UserType from '../types/auth';
+import ImageUpload from '../components/ImageUpload';
+import Container from 'react-bootstrap/Container';
 
 type SurfType = {
   id: number;
@@ -77,6 +79,7 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
           model: surfFormData.model,
           length: surfFormData.length,
           binding: surfFormData.binding,
+          // imageUrl: surfFormData.imageUrl
           
         }),
       });
@@ -99,6 +102,7 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
  <>
         <Body sidebar>
             <h1 className="text-center">Create a new surfboard</h1>
+            <Container>
             <Card className='mt-3'>
                 <Card.Body>
                     <Form onSubmit={CreateSurf}>
@@ -117,10 +121,15 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
                         <Form.Label htmlFor='description'>description</Form.Label>
                         <Form.Control value={surfFormData.description} name='description'  onChange={handleInputChange} />
 
+                        <Form.Label htmlFor='image'>Image</Form.Label>
+                        <ImageUpload onUpload={(imageUrl) => setSurfFormData({...surfFormData, imageUrl})} />
+
+
                         <Button type='submit' variant='outline-success' className='w-100 mt-3'>Add Surfboard</Button>
                     </Form>
                 </Card.Body>
             </Card>
+            </Container>
             </Body>
         </>
   );

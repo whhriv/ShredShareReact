@@ -44,7 +44,7 @@ export default function LoginPage() {
         console.log('Sending request with username:', username, 'and password:', password);
 
         const response = await fetch('http://127.0.0.1:5000/api/users', {
-          method: 'POST',
+          method: 'POST', //GET request for token with username/password
           headers: {
             'Content-Type': 'application/json',
           },

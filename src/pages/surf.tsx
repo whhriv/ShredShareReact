@@ -2,7 +2,7 @@
 import  Card  from 'react-bootstrap/Card';
 import { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
-import Sidebar from '../components/SideBar';
+import Sidebar from '../components/SideBar1';
 import Body from '../components/Body';
 
 type SurfType = {

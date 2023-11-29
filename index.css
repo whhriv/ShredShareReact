@@ -15,7 +15,7 @@
   }
   .Sidebar {
     width: 120px;
-    margin: 5px;
+    margin: 0px;
     position: sticky;
     top: 62px;
     align-self: flex-start;

@@ -4,6 +4,8 @@ import Body from '../components/Body';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import UserType from '../types/auth';
+import ImageUpload from '../components/ImageUpload';
+import Container from 'react-bootstrap/Container';
 
 type SkiType = {
   id: number;
@@ -75,6 +77,7 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
           model: skiFormData.model,
           length: skiFormData.length,
           binding: skiFormData.binding,
+          // imageUrl: skiFormData.imageUrl
           
         }),
       });
@@ -97,6 +100,7 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
  <>
         <Body sidebar>
             <h1 className="text-center">Create a new Ski</h1>
+            <Container>
             <Card className='mt-3'>
                 <Card.Body>
                     <Form onSubmit={createSki}>
@@ -118,11 +122,18 @@ const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
                         <Form.Label htmlFor='description'>description</Form.Label>
                         <Form.Control value={skiFormData.description} name='description'  onChange={handleInputChange} />
 
+                        <Form.Label htmlFor='image'>Image</Form.Label>
+                        <ImageUpload onUpload={(imageUrl) => setSkiFormData({...skiFormData, imageUrl})} />
+
 
                         <Button type='submit' variant='outline-success' className='w-100 mt-3'>Add Ski</Button>
+                        
                     </Form>
+                    
+                    
                 </Card.Body>
             </Card>
+            </Container>
             </Body>
         </>
   );
